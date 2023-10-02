@@ -72,11 +72,11 @@ def qa_result(_):
 
     # save pdf file to a temp file
     if file_input.value is not None:
-        file_input.save("/.cache/temp.pdf")
+        file_input.save("./temp.pdf")
 
         prompt_text = prompt.value
         if prompt_text:
-            result = qa(file="/.cache/temp.pdf", query=prompt_text, chain_type=select_chain_type.value, k=select_k.value)
+            result = qa(file="./temp.pdf", query=prompt_text, chain_type=select_chain_type.value, k=select_k.value)
             convos.extend([
                 pn.Row(
                     pn.panel("\U0001F60A", width=10),
